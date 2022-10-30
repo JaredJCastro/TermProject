@@ -36,9 +36,54 @@
     body {
       font-family: "Fuzzy Bubbles", cursive;
       background-color: beige;
+      margin: 0;
+      padding: 0;
+    }
+    a,
+    a:hover,
+    a:visited,
+    a:active {
+      color: inherit;
+      text-decoration: none;
+    }
+    header {
+      width: 100%;
+      height: 70px;
+      background-color: rgb(70, 117, 189);
+    }
+    #nav {
+      position: absolute;
+      padding: 3px;
+      float: left;
+      margin-left: 2%;
+      margin-top: 20px;
+      color: aliceblue;
+    }
+    ul {
+      width: auto;
+      float: right;
+      margin-top: 8px;
+      color: aliceblue;
+    }
+    li {
+      display: inline-block;
+      padding: 20px 30px;
+      color: aliceblue;
+      text-decoration: none;
+      font-weight: 900;
     }
   </style>
   <body>
+    <header>
+      <a href="index.html"><h2 id="nav">WhatToDoNYC</h2></a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sitemap.html">Sitemap</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
     <h1 id="title">Sunset Park!</h1>
     <img
       class="sunsky"

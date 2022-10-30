@@ -5,16 +5,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bookstore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
   </head>
+  <style>
+    h1 {
+      text-align: center;
+    }
+    p {
+      text-align: center;
+      margin-left: 25%;
+      margin-right: 25%;
+      font-size: x-large;
+    }
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 50px;
+    }
+    #title {
+      font-size: 70px;
+    }
+    body {
+      font-family: "Fuzzy Bubbles", cursive;
+      background-color: beige;
+      margin: 0;
+      padding: 0;
+    }
+    a,
+    a:hover,
+    a:visited,
+    a:active {
+      color: inherit;
+      text-decoration: none;
+    }
+    header {
+      width: 100%;
+      height: 70px;
+      background-color: rgb(70, 117, 189);
+    }
+    #nav {
+      position: absolute;
+      padding: 3px;
+      float: left;
+      margin-left: 2%;
+      margin-top: 20px;
+      color: aliceblue;
+    }
+    ul {
+      width: auto;
+      float: right;
+      margin-top: 8px;
+      color: aliceblue;
+    }
+    li {
+      display: inline-block;
+      padding: 20px 30px;
+      color: aliceblue;
+      text-decoration: none;
+      font-weight: 900;
+    }
+  </style>
   <body>
-    <h1>The Best Bookstores in New York City</h1>
+    <header>
+      <a href="index.html"><h2 id="nav">WhatToDoNYC</h2></a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sitemap.html">Sitemap</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+    <h1 id="title">The Best Bookstores in New York City</h1>
     <img
       src="images/bookstore.jpg"
       alt="bookstore"
       title="Picture of Bookstore"
       height="500"
     />
-    <p>para about books in nyc</p>
+    <p>New York City is home to so many fantastic bookstores. Visiting bookstores is one of my favorite things to do and I have been to nearly every single bookstore in the city. Below are some of my favorites, bookstores that are definitely worth the time to check out.</p>
+    <br>
+    <hr>
 
     <h1>Strand</h1>
     <img
@@ -23,7 +101,8 @@
       title="Picture of Strand"
       height="500"
     />
-    <p>para about strand</p>
+    <p>Quite possibly New York's most famous bookstore, Strand is known for its slogan of having over "18 miles of books." Featuring four floors on the inside and dozens of shelves of books on the outside, Strand has the widest assortment of books in the city. Strand is a must-visit for all bookworms.</p>
+    <br>
 
     <h1>McNally Jackson</h1>
     <img
@@ -32,7 +111,8 @@
     title="Picture of McNally Jackson"
     height="500"
     />
-    <p>para about mcnally</p>
+    <p>McNally Jackson is noteable for its incredibly cozy atmosphere. The walls are lined with books and bookshelves are used to divvy up the room. There are even books in the staircase! With 4 locations across the city, McNally Jackson is a great place to stop by to grab your next read.</p>
+    <br>
 
     <h1>Unnameable Books</h1>
     <img
@@ -41,15 +121,7 @@
     title="Picture of Unnameable Books"
     height="500"
     />
-    <p>para about unname</p>
+    <p>The smallest shop on the list, Unnameable Books specialized in old and rare books. As many of their books are used, their price range tends to be on the cheaper side. Located in Park Slope, this bookstore is well worth the visit.</p>
 
-    <h1>Books Are Magic</h1>
-    <img
-    src="images/booksaremagic.jpg"
-    alt="books-are-magic"
-    title="Picture of Books Are Magic"
-    height="500"
-    />
-    <p>para about books are magic</p>
   </body>
 </html>
