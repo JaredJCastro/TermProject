@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <style>
+      body,
+      html {
+        font-family: "Fuzzy Bubbles", cursive;
+        background-color: beige;
+        margin: 0;
+        padding: 0;
+      }
+      a,
+      a:hover,
+      a:visited,
+      a:active {
+        color: inherit;
+        text-decoration: none;
+      }
+      header {
+        width: 100%;
+        height: 70px;
+        background-color: rgb(70, 117, 189);
+      }
+      #nav {
+        position: absolute;
+        padding: 3px;
+        float: left;
+        margin-left: 2%;
+        margin-top: 20px;
+        color: aliceblue;
+      }
+      #title {
+        font-size: 70px;
+      }
+      ul {
+        width: auto;
+        float: right;
+        margin-top: 8px;
+        color: aliceblue;
+      }
+      li {
+        display: inline-block;
+        padding: 20px 30px;
+        color: aliceblue;
+        text-decoration: none;
+        font-weight: 900;
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      .container {
+        background-color: aliceblue;
+        margin: 10px;
+        padding: 20px;
+        border-color: black;
+        border-style: dashed;
+      }
+      div {
+        margin: 5px;
+        color: darkblue;
+      }
+      .droptitle,
+      .dropbox {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><h2 id="nav">WhatToDoNYC</h2></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <h1 id="title">Contact Form</h1>
+    <form action="https://oim-apis.herokuapp.com/form2" method="post">
+      <div class="container">
+        <div>
+          <label for="last-name">Last Name:</label>
+          <input
+            type="text"
+            placeholder="Last Name"
+            id="last-name"
+            name="lastname"
+          />
+        </div>
+        <div>
+          <label for="first-name">First Name:</label>
+          <input
+            type="text"
+            placeholder="First Name"
+            id="first-name"
+            name="firstname"
+          />
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input
+            type="text"
+            placeholder="Email address"
+            id="email"
+            name="mail"
+          />
+
+          </div>
+          <div>
+            <div>
+              <label for="comments">Feedback:</label>
+            </div>
+            <div>
+              <textarea
+                id="comments"
+                name="comments"
+                rows="5"
+                cols="25"
+                placeholder="Enter your comment here..."
+              ></textarea>
+            </div>
+          </div>
+          <button type="submit">
+            SUBMIT
+          </button>
+          <button type="reset">
+            RESET
+          </button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
