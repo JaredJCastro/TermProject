@@ -21,6 +21,7 @@
     }
     h2 {
       text-align: center;
+      color: blue;
       /* margin: 50px; */
     }
     p {
@@ -80,6 +81,28 @@
       text-decoration: none;
       font-weight: 900;
     }
+    #Btn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      color:white;
+      background-color: black;
+      padding: 5px;
+      border-radius: 15px;
+    }
+    #Btn:hover {
+      background-color: #555;
+    }
+    #darkmd {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      color: white;
+      background-color: black;
+      padding: 5px;
+      border-radius: 15px;
+    }
   </style>
   <body>
     <header>
@@ -92,9 +115,9 @@
         </ul>
       </nav>
     </header>
+    <button onclick="darkMode()" id="darkmd" title="darkmd">Dark Mode</button>
     <h1 id="title">What To Do In NYC</h1>
-    <hr />
-    <img src="images/ny.jpg" alt="nyc" title="Picture of NYC" height="600" />
+    <img id="nyimg" src="images/ny.jpg" alt="nyc" title="Picture of NYC" height="600" />
     <p>
       Hello! My name is Jared Castro and I was born and raised in Brooklyn, NY.
       I often meet people who are either planning to visit New York City or
@@ -105,7 +128,7 @@
       to make a website with this purpose in mind.
     </p>
     <br />
-    <p>On this site, I have pages with recommendations for the following:</p>
+    <p>Click for recommendations on the following:</p>
     <a href="restaurants.html"><h2>Restaurants to Visit</h2></a>
 
     <a href="dessert.html"><h2>Dessert Spots!</h2></a>
@@ -116,5 +139,43 @@
 
     <a href="bookstores.html"><h2>The Best Bookstores in NYC</h2></a>
     <a href="sights.html"><h2>Sights to See</h2></a>
+    <button onclick="topFunction()" id="Btn" title="Go to top">Go to Top</button>
+
+    <script>
+      let mybtn = document.getElementById("Btn");
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 20) {
+          mybtn.style.display = "block";
+        } else {
+          mybtn.style.display = "none";
+        }
+      }
+      function topFunction() {
+        document.documentElement.scrollTop = 0;
+      }
+
+      function newImg() {
+        const image = document.getElementById("nyimg");
+        image.src = "images/nyc.jpg"
+      }
+      document.querySelector("img").addEventListener("click", function () {
+        newImg
+      })
+      function enlargeImage() {
+        const image = document.getElementById("nyimg");
+        let w = image.width;
+        w = w + 30;
+        image.width = w
+      }
+      document.querySelector("img").addEventListener("mouseover", function () {
+        enlargeImage();
+      });
+      function darkMode() {
+        document.body.style.color = "white";
+        document.body.style.backgroundColor = "black";
+      }
+    </script>
   </body>
 </html>

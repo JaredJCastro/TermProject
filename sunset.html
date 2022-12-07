@@ -72,6 +72,28 @@
       text-decoration: none;
       font-weight: 900;
     }
+    #Btn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      color:white;
+      background-color: black;
+      padding: 5px;
+      border-radius: 15px;
+    }
+    #Btn:hover {
+      background-color: #555;
+    }
+    #darkmd {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      color: white;
+      background-color: black;
+      padding: 5px;
+      border-radius: 15px;
+    }
   </style>
   <body>
     <header>
@@ -84,6 +106,7 @@
       </ul>
     </nav>
   </header>
+  <button onclick="darkMode()" id="darkmd" title="darkmd">Dark Mode</button>
     <h1 id="title">Sunset Park!</h1>
     <img
       class="sunsky"
@@ -197,5 +220,26 @@
       place here during the American Revolution. Battle Hill is also the highest
       natural point in Brooklyn.
     </p>
+    <button onclick="topFunction()" id="Btn" title="Go to top">Go to Top</button>
+
+    <script>
+      let mybtn = document.getElementById("Btn");
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 20) {
+          mybtn.style.display = "block";
+        } else {
+          mybtn.style.display = "none";
+        }
+      }
+      function topFunction() {
+        document.documentElement.scrollTop = 0;
+      }
+      function darkMode() {
+        document.body.style.color = "white";
+        document.body.style.backgroundColor = "black";
+      }
+    </script>
   </body>
 </html>
